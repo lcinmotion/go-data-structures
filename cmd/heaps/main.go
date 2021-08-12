@@ -34,7 +34,7 @@ func (h *MaxHeap) Extract() int {
 	return extracted
 }
 
-// maxHeapifyUp will heapify from bottom top
+// maxHeapifyUp will heapify from bottom to top
 func (h *MaxHeap) maxHeapifyUp(index int) {
 	for h.array[parent(index)] < h.array[index] {
 		h.swap(parent(index), index)
@@ -54,7 +54,7 @@ func (h *MaxHeap) maxHeapifyDown(index int) {
 			childToCompare = l
 		} else if h.array[l] > h.array[r] { //when left child is larger
 			childToCompare = l
-		} else { // when right child is large
+		} else { // when right child is larger
 			childToCompare = r
 		}
 		// compare array value of current index to larger child
